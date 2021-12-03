@@ -32,7 +32,7 @@ This initializes an empty repository locally on your computer.
 git init
 ```
 
-#### 3) Git status 
+#### 2) Git status 
 
 This command shows which files are added to the staging area (More about the different stages of a file in Git in the next post) and which are left to be added. 
 
@@ -40,7 +40,7 @@ This command shows which files are added to the staging area (More about the dif
 git status
 ```
 
-#### 2) Git add 
+#### 3) Git add 
 
 This adds the files from your working tree into the staging area.
 
@@ -52,7 +52,7 @@ git add -u #Doesn't add new files [Stage modified and deleted files only]
 git add index.js #Adds only index.js file into the staging area
 ```
 
-#### 3) Git commit 
+#### 4) Git commit 
 
 > **What's a commit?**:
 A commit records the changes that were staged when the commit was made. In this case, the changes that this commit recorded are
@@ -67,7 +67,7 @@ git commit -m "your message"
 git amend -amend -m "your edited commit message" #Updates the commit message"
 ```
 
-#### 4) Git push 
+#### 5) Git push 
 
 This command is used to push your code to a Git provider like GitHub.
 
@@ -75,7 +75,7 @@ This command is used to push your code to a Git provider like GitHub.
 git push 
 ```
 
-#### 5) Git clone 
+#### 6) Git clone 
 
 If you want to clone a whole repository from Git provider like GitHub, then do the following
 
@@ -90,7 +90,7 @@ Copy the URL and run the following command
 git clone https://github.com/Kira272921/portfolio.git #Change the URL with the one which you have copied
 ```
 
-#### 6) Git branch
+#### 7) Git branch
 
 A Git branch is an brand new working directory, staging area, and project history.
 
@@ -124,7 +124,7 @@ git branch -d branch-name
 git branch -m old-branch-name new-branch-name
 ```
 
-#### 7) Git checkout
+#### 8) Git checkout
 
 This allows you to switch between branches
 
@@ -132,7 +132,7 @@ This allows you to switch between branches
 git checkout branch-name
 ```
 
-#### 8) Git merge
+#### 9) Git merge
 
 This allows you to merge a branch with the currently active branch (the branch which you are currently in) with any available branch
 
