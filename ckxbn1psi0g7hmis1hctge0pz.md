@@ -142,6 +142,6 @@ To use queries, we will be using `?` symbol specified with the query name and th
 
 > For example:
 >
-> `/languages?id=2`, would return the element with the > index 2 from the languages list
+> `/languages?id=2`, would return the element with the of index 2 from the languages list
 
 👋 That's it for this blog, hope you have learned something useful from this blog. Meet you the next week with some other interesting blog 🥳
