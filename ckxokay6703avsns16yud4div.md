@@ -49,7 +49,7 @@ Let's now understand the folder structure, before experminating with docusaurus 
 - `blog` - Contains all the markdown files for blog.
 - `docs` - Contains all the markdown files for the documentation.
 - `src` - Contains all the react components and pages
-- `static` - Contains all the static assests as images
+- `static` - Contains all the static assets such as images
 - `docusaurus.config.js` - Contains all the configuration for our docusaurus site
 
 ## Experminating with Docusaurus 🧪
