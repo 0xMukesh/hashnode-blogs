@@ -299,4 +299,6 @@ In this case the object is `footer`, which is right under the `navbar` object an
 
 That's all for this blog. Meet y'all next week with some another intersting blog 👋
 
-The source code for this tutorial would be available on my [GitHub](https://github.com/Kira272921/docusaurus-tutorial).
+The source code for this tutorial would be available on my GitHub.
+
+%[https://github.com/Kira272921/docusaurus-tutorial]
