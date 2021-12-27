@@ -217,7 +217,7 @@ Delete the piece of code, under that comment and uncomment code under which is u
 
 `But you can create a sidebar manually`
 
-This would be the remaining code in `sidebars.js` file afterteh above tweeks
+This would be the remaining code in `sidebars.js` file after the above tweeks
 
 ```javascript
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
