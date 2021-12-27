@@ -40,7 +40,7 @@ This would start a local development server at https://localhost:3000
 
 ## Understanding the folder structure
 
-> Open up the folder in your preferred text editore or IDE (I would be using VSCode)
+> Open up the folder in your preferred text editor or IDE (I would be using VSCode)
 
 Let's now understand the folder structure, before experminating with docusaurus 🧪
 
