@@ -174,7 +174,7 @@ Let's break it down and understand what each part means
   <br>
   ![](https://imgur.com/pP8d7QA.png)
 
-### Cleaning up the codebase [Optional]
+## Cleaning up the codebase [Optional]
 
 We could create a folder inside the `bin` folder named `utils` and create a file inside the `utils` folder named `questions.js`. In the `questions.js` we can store the questions and import them into the `index.js` file
 
