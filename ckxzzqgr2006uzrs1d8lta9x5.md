@@ -281,7 +281,7 @@ Let's find some template for the JS frameworks integrated with TailwindCSS
 - [Svelte + TailwindCSS](https://github.com/jhanca-vm/Svelte-Tailwind) by [jhanca-vm](https://github.com/jhanca-vm)
 - [VueJS + TailwindCSS](https://github.com/web2033/vite-vue3-tailwind-starter) by [web2023](https://github.com/web2033)
 
-Thanks a lot for the wonderful people who have made these great templates from the community ✨
+Thanks a lot for the wonderful people who have made these great templates for the community ✨
 
 To run a `git clone` command, use ShellJS we have just use the `exec` method
 
