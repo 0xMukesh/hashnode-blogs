@@ -1,16 +1,18 @@
 ## How to build a CLI using NodeJS 💻
 
-CLI (Command Line Interface) are one of the most basic and powerful applications ever created by the mankind. We all use CLI everday, whether it be npm, git or any other CLI. Does your daily basis workflow have something that you have to over and over again ? 🤔. The chances are that it could be automated using CLI ✨
+## How to build a CLI using NodeJS 💻
+
+CLI (Command Line Interface) is one of the most basic and powerful applications ever created by mankind. We all use CLI every day, whether it be npm, git, or any other CLI. Does your daily basis workflow have something that you have to do over and over again? 🤔. The chances are that it could be automated using CLI ✨
 
 So let's get started 🏄
 
 ![](https://c.tenor.com/r3XdvPsAV3kAAAAC/despicable-me-minions.gif)
 
-Toady we are going to be building a CLI which would generate starter templates with TailwindCSS pre-installed.
+Today we are going to be building a CLI which would generate starter templates with TailwindCSS, ESLint, and Prettier pre-installed.
 
 # Prerequisites
 
-Here are few tools which you would need to follow along with tutorial:
+Here are a few tools which you would need to follow along with the tutorial:
 
 1. A LTS (Long Term Support) version of [NodeJS](https://nodejs.org/en/) installed.
 2. A text editor.
@@ -45,13 +47,13 @@ Now that we have our NodeJS setup ready. Let's start building our CLI
 1. Create a folder named `bin` in the root directory of your project folder.
 2. Create a file called `index.js` in the `bin` folder. This is going to be the main file of the CLI.
 3. Now open up the `package.json` file and change the value of the key `main` to `./bin/index.js`.
-4. Now add an entry into the `package.json` file called `bin` and add set it's key to `tcli` and it's value to `./bin/index.js`
+4. Now add an entry into the `package.json` file called `bin` and add set its key to `tcli` and its value to `./bin/index.js`
 
    > The word `tcli` is the keyword which we would be using to call our CLI.
 
 After making the changes the `package.json` file should look something like this:
 
-```json
+```JSON
 {
   "name": "tailwindcli",
   "version": "1.0.0",
@@ -75,11 +77,11 @@ After making the changes the `package.json` file should look something like this
 #! /usr/bin/env node
 ```
 
-> The line starting with a `#!` is called a shebang line. A shebang line is used to tell the the absolute path to the interpreter that will run the below code.
+> The line starting with a `#!` is called a shebang line. A shebang line is used to tell the absolute path to the interpreter that will run the below code.
 
-Let's add some actually JS code so that we can test the CLI out 🚀.
+Let's add some JS code so that we can test the CLI out 🚀.
 
-7. Adding some actually JS code
+7. Adding some JS code
 
 ```javascript
 console.log('The CLI is working 🚀');
@@ -101,7 +103,7 @@ Let's test our CLI by running `tcli` command.
 
 # Installing and working with Inquirer
 
-Inquirer is a package which is used to make interactive CLI interfaces. Such as :
+Inquirer is a package that is used to make interactive CLI interfaces. Such as :
 
 ![](https://raw.githubusercontent.com/SBoudrias/Inquirer.js/869cd40cf2424414b522a2470a1bc80a713cac8d/assets/screenshots/list.svg)
 
@@ -159,7 +161,7 @@ Let's break it down and understand what each part means
   <br>
   ![](https://imgur.com/x02hyEd.png)
 
-- `name` : Inquirer returns the answers in the form of a object. For example:
+- `name` : Inquirer returns the answers in the form of an object. For example:
 
   - If we add `console.log(answers);`, then we would get a result something like this
     <br>
@@ -223,7 +225,7 @@ inquirer.prompt(questions).then((answers) => {
 
 It's time to add some logic as we are doing creating questions.
 
-Accessing answers of questions are similar to accesing the value of a key from an object. The value of the answer of a specific question is `answers.<name-of-the-question>`
+Accessing answers to questions are similar to accessing the value of a key from an object. The value of the answer of a specific question is `answers.<name-of-the-question>`
 
 As we are creating starter files, let's use [ShellJS](https://github.com/shelljs/shelljs) to run commands like `git clone`, `mkdir`...
 
@@ -237,7 +239,7 @@ npm install shelljs
 
 ## Working with ShellJS
 
-Let's add few if and else blocks for logic
+Let's add a few if and else blocks for logic
 
 ```javascript
 #! /usr/bin/env node
@@ -272,7 +274,7 @@ inquirer.prompt(questions).then((answers) => {
 });
 ```
 
-Let's find some template for the JS frameworks integrated with TailwindCSS
+Let's find some templates for the JS frameworks integrated with TailwindCSS
 
 - [React + TailwindCSS](https://github.com/YashKumarVerma/react-tailwind-template) by [YashKumarVerma](https://github.com/YashKumarVerma)
 - [NextJS + TailwindCSS](https://github.com/Neeraj1005/Nextjs-tailwind-template) by [Neeraj1005](https://github.com/Neeraj1005)
@@ -281,9 +283,9 @@ Let's find some template for the JS frameworks integrated with TailwindCSS
 - [Svelte + TailwindCSS](https://github.com/jhanca-vm/Svelte-Tailwind) by [jhanca-vm](https://github.com/jhanca-vm)
 - [VueJS + TailwindCSS](https://github.com/web2033/vite-vue3-tailwind-starter) by [web2023](https://github.com/web2033)
 
-Thanks a lot for the wonderful people who have made these great templates for the community ✨
+Thanks a lot to the wonderful people who have made these great templates for the community ✨
 
-To run a `git clone` command, use ShellJS we have just use the `exec` method
+To run a `git clone` command, use ShellJS we have just used the `exec` method
 
 ```javascript
 shell.exec('git clone <repo-link>');
@@ -628,11 +630,11 @@ We have successfully completed building our CLI 🥳. Let's now deploy it to npm
 
 ## Creating a npm account
 
-Go over to [npmjs.org](https://www.npmjs.com/) and create an account and make sure that your are verifiying it as well
+Go over to [npmjs.org](https://www.npmjs.com/) and create an account and make sure that you are verifying it as well
 
 ## Unique package name
 
-npm packages have unique names. npm doesn't allow to publish a package with a name which is already taken. Go over to [npmjs.org](https://www.npmjs.com/) and check whether your package name is taken or not.
+npm packages have unique names. npm doesn't allow publishing a package with a name that is already taken. Go over to [npmjs.org](https://www.npmjs.com/) and check whether your package name is taken or not.
 
 `tailwindcli` is already taken by [this](https://www.npmjs.com/package/tailwindcli) package. So I have to change the name to `tailwindcsscli`
 
@@ -645,7 +647,7 @@ If your package is unique and is not taken, skip this step, if it isn't then fol
 
 ## Adding keywords
 
-Let's add few keywords related to our package. As we have built a CLI during this tutorial, let's have the following as the keywords :
+Let's add a few keywords related to our package. As we have built a CLI during this tutorial, let's have the following as keywords :
 
 - cli
 - tailwindcss
@@ -653,7 +655,7 @@ Let's add few keywords related to our package. As we have built a CLI during thi
 
 ## Adding license
 
-Checkout [license-templates](https://github.com/licenses/license-templates) GitHub repository for license templates which you could use in your project. In my case, I am using MIT license
+Check out [license-templates](https://github.com/licenses/license-templates) GitHub repository for license templates which you could use in your project. In my case, I am using MIT license
 
 ## Adding repository link
 
@@ -677,7 +679,7 @@ In my case, the repo link is https://github.com/Kira272921/tailwindcsscli. So it
 
 ### Adding link to bugs reports
 
-Let's add the link to site/place where the users do report bugs about our package. Generally it would be the link to issues page in the GitHub repository
+Let's add the link to the site/place where the users do report bugs about our package. Generally, it would be the link to the issues page in the GitHub repository
 
 ```json
 "bugs": {
@@ -687,7 +689,7 @@ Let's add the link to site/place where the users do report bugs about our packag
 
 ### Adding link to the homepage
 
-Let's add the link to homepage of our npm package. Generally it would be the link to the README link of the GitHub repository
+Let's add the link to the homepage of our npm package. Generally, it would be the link to the README link of the GitHub repository
 
 ```json
 "homepage": "https://github.com/Kira272921/tailwindcsscli/issues#readme"
@@ -695,7 +697,7 @@ Let's add the link to homepage of our npm package. Generally it would be the lin
 
 ## Login into your npm account via npm CLI
 
-Let's now login it our npm account via npm CLI so that we can publish our package to npm. To login into yout npm account, run the following command and enter the correct credentials.
+Let's now login in to our npm account via npm CLI so that we can publish our package to npm. To login into your npm account, run the following command and enter the correct credentials.
 
 ```bash
 npm login
@@ -713,7 +715,7 @@ npm publish
 
 ![](https://imgur.com/422d1uG.png)
 
-Let's change the name our package accordingly and publish using the command recommended. My `package.json` looks something like this now
+Let's change the name of our package accordingly and publish using the command recommended. My `package.json` looks something like this now
 
 ```json
 {
@@ -757,7 +759,7 @@ Fingers crossed 🤞. Yay! We have successfully published our CLI to npm 🥳
 
 # The end
 
-The code for this tutorial is avaiable on Github
+The code for this tutorial is available on Github
 https://github.com/Kira272921/tailwindcsscli
 
 That's for this blog folks. Hope that you have learned something new from this blog post. Meet y'all in the next blog post 👋.
