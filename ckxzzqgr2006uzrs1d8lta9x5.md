@@ -758,6 +758,6 @@ Fingers crossed 🤞. Yay! We have successfully published our CLI to npm 🥳
 # The end
 
 The code for this tutorial is avaiable on Github
-%[https://github.com/Kira272921/tailwindcsscli]
+https://github.com/Kira272921/tailwindcsscli
 
 That's for this blog folks. Hope that you have learned something new from this blog post. Meet y'all in the next blog post 👋.
