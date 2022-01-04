@@ -1,12 +1,12 @@
 ## How to build a CLI using NodeJS 💻
 
-CLI (Command Line Interface) are one of the most basic and powerful application ever created by the mankind. We all use CLI everday, whether it be npm, git or any other CLI. Does your daily basis workflow have something that you have to over and over again ? 🤔. The chances are that it could be automated using CLI ✨
+CLI (Command Line Interface) are one of the most basic and powerful applications ever created by the mankind. We all use CLI everday, whether it be npm, git or any other CLI. Does your daily basis workflow have something that you have to over and over again ? 🤔. The chances are that it could be automated using CLI ✨
 
 So let's get started 🏄
 
 ![](https://c.tenor.com/r3XdvPsAV3kAAAAC/despicable-me-minions.gif)
 
-Toady we are going to be building a CLI which would generate starter templates with TailwindCSS, ESLint and Prettier pre-installed.
+Toady we are going to be building a CLI which would generate starter templates with TailwindCSS pre-installed.
 
 # Prerequisites
 
