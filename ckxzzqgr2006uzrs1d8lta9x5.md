@@ -99,7 +99,7 @@ Let's test our CLI by running `tcli` command.
 
 🎉 **Tada**, our CLI is working
 
-# Installing inquirer
+# Installing and working with Inquirer
 
 Inquirer is a package which is used to make interactive CLI interfaces. Such as :
 
@@ -483,7 +483,7 @@ inquirer.prompt(questions).then((answers) => {
 });
 ```
 
-## Beautification using Chalk
+# Beautification using Chalk
 
 We add colors to the text by using [Chalk](https://github.com/chalk/chalk)
 
