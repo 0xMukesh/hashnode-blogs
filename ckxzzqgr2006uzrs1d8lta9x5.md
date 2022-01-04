@@ -219,7 +219,7 @@ inquirer.prompt(questions).then((answers) => {
 });
 ```
 
-## Adding logic
+# Adding logic
 
 It's time to add some logic as we are doing creating questions.
 
@@ -227,7 +227,7 @@ Accessing answers of questions are similar to accesing the value of a key from a
 
 As we are creating starter files, let's use [ShellJS](https://github.com/shelljs/shelljs) to run commands like `git clone`, `mkdir`...
 
-### Installing ShellJS
+## Installing ShellJS
 
 To install ShellJS run the following command
 
@@ -235,7 +235,7 @@ To install ShellJS run the following command
 npm install shelljs
 ```
 
-### Working with ShellJS
+## Working with ShellJS
 
 Let's add few if and else blocks for logic
 
@@ -375,7 +375,7 @@ inquirer.prompt(questions).then((answers) => {
 });
 ```
 
-### Cleaning up the codebase [Optional]
+## Cleaning up the codebase [Optional]
 
 Let's create a new file in `utils` folder named `links.js`. Let's create a hashmap where we will store the GitHub repository links for the template repos.
 
