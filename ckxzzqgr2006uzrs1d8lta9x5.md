@@ -8,7 +8,7 @@ So let's get started 🏄
 
 ![](https://c.tenor.com/r3XdvPsAV3kAAAAC/despicable-me-minions.gif)
 
-Today we are going to be building a CLI which would generate starter templates with TailwindCSS, ESLint, and Prettier pre-installed.
+Today we are going to be building a CLI which would generate starter templates with TailwindCSS pre-installed.
 
 # Prerequisites
 
