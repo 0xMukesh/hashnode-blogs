@@ -659,7 +659,7 @@ module.exports = router;
 
 Phew that was a lot of work 😹
 
-### Adding rate limit
+## Adding rate limit
 
 You don't want some random guy to just spam your entire database 😆. So let's add rate limit to our API when restricts the client to perform only few requests every x minutes
 
