@@ -1,29 +1,29 @@
 ## How to build a REST API using NodeJS
 
-👋 Hey everyone, I know it's been really long since I posted a new blog 😅. 👀 So in this blog post we are doing to build a REST API which would serve as a source of motivation for developers using NodeJS and MongoDB. So let's get started 🏄‍♂️
+👋 Hey everyone, I know it's been a long since I posted a new blog 😅. 👀 So in this blog post we are doing to build a REST API that would serve as a source of motivation for developers using NodeJS and MongoDB. So let's get started 🏄‍♂️
 
 ![](https://c.tenor.com/r3XdvPsAV3kAAAAS/despicable-me-minions.gif)
 
-# What's an API ? 🤔
+# What's an API? 🤔
 
-API stands for "Application Programming Interface" which is a tool which allows two applications to talk to each other 📞. Let's actually understand the meaning of API by some real life example ✨
+API stands for "Application Programming Interface" which is a tool that allows two applications to talk to each other 📞. Let's understand the meaning of API by some real-life examples ✨
 
-So you have built a amazing e-store application and you wanted other developers to build applications on it. Now you have to built some sort of software which communicates between your web service and the developer's application and that's where API comes in.
+So you have built an amazing e-store application and you wanted other developers to build applications on it. Now you have to build some sort of software that communicates between your web service and the developer's application and that's where API comes in.
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--5mJq34Yb--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://user-images.githubusercontent.com/26124625/104198884-ca1bcf80-544c-11eb-94d1-22548426ad4d.png)
 
-## What's an REST API ? 🤔
+## What's a REST API? 🤔
 
-Now as you have let's talk something about "REST APIs". REST stands for **Representational State Transfer**, it's one of the most popular known type of API architecture. These type of APIs follow the client-server model, where one program send a request and the other response with some data.
-The requests are basically HTTP methods such as POST, GET, PUT, DELETE....
+Now as you have let's talk something about "REST APIs". REST stands for **Representational State Transfer**, it's one of the most popularly known type of API architecture. These types of APIs follow the client-server model, where one program sends a request and the other response with some data.
+The requests are HTTP methods such as POST, GET, PUT, DELETE...
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--8sH5rrSh--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://user-images.githubusercontent.com/26124625/104204412-431e2580-5453-11eb-9827-29a65aa6ff82.png)
 
-You would have a more clear understanding about APIs and REST APIs when we actually build a project 👀. So what are we waiting for, let's dive started into coding 👨‍💻.
+You would have a more clear understanding of APIs and REST APIs when we build a project 👀. So what are we waiting for, let's dive started into coding 👨‍💻.
 
 # Setting up the project 🛠
 
-Let's setup our project so that we can start coding 👨‍💻.
+Let's set up our project so that we can start coding 👨‍💻.
 
 1. Creating a separate folder for our project
 
@@ -54,9 +54,9 @@ Let's setup our project so that we can start coding 👨‍💻.
    ```
 
    - Express is the framework by which we are going to our REST API
-   - Mongoose is the tool which we are going to use to communicate with our MongoDB database
+   - Mongoose is the tool that we are going to use to communicate with our MongoDB database
 
-     4.1. Installing nodemon as dev dependency
+     4.1. Installing nodemon as a dev dependency
 
      ```bash
      $ npm install nodemon -D
@@ -66,7 +66,7 @@ Let's setup our project so that we can start coding 👨‍💻.
      $ yarn add nodemon -D
      ```
 
-     - Nodemon is used for automatically restarting the server on file changes detected in the directory. This would really helpful as we would not be restarting the server each time we do changes
+     - Nodemon is used for automatically restarting the server on file changes detected in the directory. This would be helpful as we would not be restarting the server each time we do changes
 
 # Building the REST API 👨‍💻
 
@@ -92,19 +92,19 @@ app.listen(port, async () => {
 
 Let's breakdown it into and understand each part:
 
-- We are requiring the express package into our file, so that we can use it
-- We are assigning some value to the variable port, the port where our server would be running. You might be thinking why is there a `process.env.PORT` ? 🤔. It's because during deployment on services such as heroku the port number might vary, it may not be 3000 so we are telling that if there is a PORT environment variable then use that else use 3000
+- We are requiring the express package into our file so that we can use it
+- We are assigning some value to the variable port, the port where our server would be running. You might be thinking why is there a `process.env.PORT`? 🤔. It's because during deployment on services such as Heroku the port number might vary, it may not be 3000 so we are telling that if there is a PORT environment variable then use that else use 3000
 - The last piece of code is telling to which port the server should listen, in your case it's the `PORT` variable
 
-Let's add a new script named `start` to `package.json` file which uses nodemon to automatically restart the server on file changes detected. So after the changes our scripts in `package.json` would look something like this:
+Let's add a new script named `start` to the `package.json` file which uses nodemon to automatically restart the server on file changes detected. So after the changes our scripts in `package.json` would look something like this:
 
-```json
+```JSON
 "scripts": {
    "start": "nodemon index.js"
 }
 ```
 
-Let's start our server by running `npm start` command. The server would be running at [http://localhost:3000](http://localhost:3000). You prompted with an error something like this:
+Let's start our server by running the `npm start` command. The server would be running at [http://localhost:3000](http://localhost:3000). You prompted with an error something like this:
 
 ![](https://imgur.com/XeUfz0l.png)
 
@@ -112,11 +112,11 @@ This is happening because we haven't defined the `/` (aka the root route)
 
 ## HTTP methods explained
 
-Let's take a break from coding and understand what do they do and what's the success and error status, so that it would be easy for debugging 😎
+Let's take a break from coding and understand what do they do and what's the success and error status so that it would be easy for debugging 😎
 
 ### GET
 
-**What it does**: Request data from an specified resource
+**What it does**: Request data from a specified resource
 
 **Successful response**: 200 OK
 
@@ -132,7 +132,7 @@ Let's take a break from coding and understand what do they do and what's the suc
 
 ### PUT
 
-**What it does**: Send data to the server to update an pre-existing resource
+**What it does**: Send data to the server to update a pre-existing resource
 
 **Successful response**: 200 OK
 
@@ -146,13 +146,13 @@ Let's take a break from coding and understand what do they do and what's the suc
 
 **Error response**: 404 not found or 405 method not allowed
 
-Check out [http.cat](https://http.cat/) for understanding what each http status code actually means via funny cat images 😹
+Check out [http.cat](https://http.cat/) for understanding what each HTTP status code means via funny cat images 😹
 
 ## Adding routes 🛣
 
-Routes are basically different URL paths of an express app which are associated with different HTTP methods, such as `GET`, `POST`, `DELETE`, `PUT`.
+Routes are different URL paths of an express app that are associated with different HTTP methods, such as `GET`, `POST`, `DELETE`, `PUT`.
 
-Let get started by creating `/` which sends "Hello, World!"
+Let's get started by creating `/` which sends "Hello, World!"
 
 Add the below piece of code above the line where we declared the `port` variable
 
@@ -167,8 +167,8 @@ app.get('/', function (req, res) {
 Let's breakdown this piece of code:
 
 - The `get` method specifies the HTTP method for that route. You could use other HTTP methods like `post`, `delete`...
-  - There is a special routing method `all` which is used for the routes which handles all kinds of HTTP methods
-- There is a callback method which is called when the server receives a request from that endpoint with that specify HTTP method
+  - There is a special routing method `all` which is used for the routes which handle all kinds of HTTP methods
+- There is a callback method that is called when the server receives a request from that endpoint with that specified HTTP method
 
 🥳 Horray! "Hello, World" is now visible in the `/` route
 
@@ -182,9 +182,9 @@ Head over [MongoDB](https://www.mongodb.com/) and sign up/sign in and create a n
 
 ![](https://imgur.com/P1PiZ7r.png)
 
-You could your co-worker into the project, if you wanted too.
+You could your co-worker into the project if you wanted too.
 
-After the creation of project, click on `Build a Database`
+After the creation of the project, click on `Build a Database`
 
 ![](https://imgur.com/COT14kz.png)
 
@@ -200,9 +200,9 @@ You would be shown some more options about the cloud provider and the location
 
 Let's choose the nearest region and move forward.
 
-You would be asked to create an user. This is required as you would need the username and password to generate an connection URL which is then used to connect MongoDB with your NodeJS app.
+You would be asked to create a user. This is required as you would need the username and password to generate a connection URL which is then used to connect MongoDB with your NodeJS app.
 
-The creation of the cluster would take 1 - 3 minutes. So let's grab a cup of coffee until then ☕. Ahh.. it's been successfully created so let's get back to coding 👨‍💻
+The creation of the cluster would take 1 - 3 minutes. So let's grab a cup of coffee until then ☕. Ahh... it's been successfully created so let's get back to coding 👨‍💻
 
 Click on `Connect`
 
@@ -216,7 +216,7 @@ Copy the connection URL
 
 ![](https://imgur.com/YqtMG1i.png)
 
-Create a `.env` file and replace `<password>` with the password of the user which you have replace previously
+Create a `.env` file and replace `<password>` with the password of the user which you have replaced previously
 
 ```text
 MONGODB_URL="mongodb+srv://kira272921:<password>@dev-credits-api.t5tkf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
@@ -239,7 +239,7 @@ Let's configure dotenv as well
 dotenv.config();
 ```
 
-Let's finally add the piece of code which connects our express application to mongodb
+Let's finally add the piece of code which connects our express application to MongoDB
 
 ```js
 mongoose
@@ -255,7 +255,7 @@ mongoose
   });
 ```
 
-The `index.js` file show look something like this now
+The `index.js` file show looks something like this now
 
 `index.js`
 
@@ -291,15 +291,15 @@ app.listen(port, async () => {
 });
 ```
 
-🥳 We successfully connected our express app to the mongodb database.
+🥳 We successfully connected our express app to the MongoDB database.
 
 ## Creating Schema and Model 📝
 
-A Schema is basically the structure of the documents in our database. It tells what fields are required, what's the datatype of each field.
+A Schema is the structure of the documents in our database. It tells what fields are required, what's the data type of each field.
 
 A model provides a programming interface for interacting with the database (read, insert, update, etc).
 
-Let's create a new folder named `model`and inside it let's create a `model.js` where we will define our schema
+Let's create a new folder named `model` and inside it let's create a `model.js` where we will define our schema
 
 `model/model.js`
 
@@ -322,8 +322,8 @@ module.exports = mongoose.model('devCredits', devCredits);
 
 Let's breakdown it down and understand
 
-- We imported `mongoose` package into the `model/model.js` file
-- We created a new schema named `devCredits`. The structure has the `credits` and `id`. Credits is the number of dev credits the person have and the id is the basically the discord id of the user (This API was intially created for a discord bot [Dev credits bot](https://github.com/Kira272921/dev-credits-bot) so the schema of the database is kinda based on discord 🤷‍♂️)
+- We imported the `mongoose` package into the `model/model.js` file
+- We created a new schema named `devCredits`. The structure has the `credits` and `id`. Credits are the number of dev credits the person has and the id is the discord id of the user (This API was initially created for a discord bot [Dev credits bot](https://github.com/Kira272921/dev-credits-bot) so the schema of the database is kinda based on discord 🤷‍♂️)
 - We have finally created a model named "devCredits"
 
 ## Adding more features 😎
@@ -378,18 +378,18 @@ app.post('/post', function (req, res) {
 Let's understand what exactly is going on:
 
 - We have created a new POST route (`/post`)
-- We validate the data which we receive by the client using our model
+- We validate the data which we receive from the client using our model
 - In the next piece of code we are checking if the user (user id) already exists in the database or not
   - If exists then we are going to increment the credits value
   - Else we are going to create a new document with the user id and add the credits
 
-### How to test the API ?
+### How to test the API?
 
 We have successfully created added a new feature in our API 🥳. But wait how are we going to test it out 🤔
 
 👀 We are going to use a VSCode extension called [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client), which is used for API testing. So let's quickly download it and test our new feature in our API 🥳.
 
-After the completion of download, you are going to see a thunder icon in your sidebar 👀
+After the completion of the download, you are going to see a thunder icon in your sidebar 👀
 
 ![](https://imgur.com/xpDcJ9t.png)
 
@@ -401,7 +401,7 @@ Click on `New Request`. You would be prompted to screen something like this
 
 ![](https://imgur.com/8Df3YZO.png)
 
-Let's test out our `/post` route now 🥳. Change the url in the input box from `https://www.thunderclient.com/welcome` to `http:localhost:3000/post`
+Let's test out our `/post` route now 🥳. Change the URL in the input box from `https://www.thunderclient.com/welcome` to `HTTP:localhost:3000/post`
 
 Change the HTTP method from `GET` to `POST`
 
@@ -409,17 +409,17 @@ Change the HTTP method from `GET` to `POST`
 
 Navigate to the `Body` tab, this is the section where we are going to write the body of the request.
 
-I have add my discord ID and gave 100 dev credits to it, _cuz why not_
+I have added my discord ID and gave 100 dev credits to it, _cuz why not_
 
 ![](https://imgur.com/RUfKWjt.png)
 
-Let's click and hope that it work 🤞
+Let's click and hope that it works 🤞
 
 🥁🥁🥁🥁🥁 and we got an error
 
 ![](https://imgur.com/LP7dnOb.png)
 
-This happened because we didn't had any middleware so let's them quickly
+This happened because we didn't have any middleware so let's them quickly
 
 `index.js`
 
@@ -431,7 +431,7 @@ app.use(express.urlencoded({ extended: false }));
 
 **NOTE**: We had installed cors as a separated package, so don't forget to import it as well
 
-Let's try again now, so that it works now 🤞
+Let's try again now so that it works now 🤞
 
 🎉 **TADA**! We have successfully created our first feature in the API which interacts with the MongoDB database
 
@@ -526,7 +526,7 @@ router.post('/post', function (req, res) {
 module.exports = router;
 ```
 
-We have imported the `routes/router.js` file into `index.js` file and used it
+We have imported the `routes/router.js` file into the `index.js` file and used it
 
 `index.js`
 
@@ -577,9 +577,9 @@ Let's test it out so that we are sure that our code and we didn't mess up by cle
 
 ![](https://imgur.com/Jj9ee1L.png)
 
-😅 Doesn't `routes/router.js` seem kinda filled up with the logic and make it kinda messy ?
+😅 Doesn't `routes/router.js` seem kinda filled up with the logic and make it kinda messy?
 
-Let's create a new folder named `controllers`. In this folder we will store the logic related to each route.
+Let's create a new folder named `controllers`. In this folder, we will store the logic related to each route.
 
 Let's get started by creating a new file in the `controllers` folder named `getCredits.js` and `postCredits.js` which contains the logic related to the `/get` route and `/post` route respectively
 
@@ -657,11 +657,11 @@ router.post('/post', postCredits);
 module.exports = router;
 ```
 
-Phew that was a lot of work 😹
+Phew, that was a lot of work 😹
 
 ## Adding rate limit
 
-You don't want some random guy to just spam your entire database 😆. So let's add rate limit to our API when restricts the client to perform only few requests every x minutes
+You don't want some random guy to just spam your entire database 😆. So let's add a rate limit to our API when restricts the client to perform only a few requests every x minutes
 
 Let's install [express-rate-limit](https://www.npmjs.com/package/express-rate-limit) package
 
@@ -673,7 +673,7 @@ $ npm install express-rate-limit
 $ yarn add express-rate-limit
 ```
 
-Let's create a `middleware` folder which contains all the middleware's of our API. Create a file named `rateLimiter.js` under the `middleware` folder
+Let's create a `middleware` folder that contains all the middlewares of our API. Create a file named `rateLimiter.js` under the `middleware` folder
 
 `middleware/rateLimiter.js`
 
@@ -689,7 +689,7 @@ const rateLimiter = rateLimit({
 module.exports = rateLimiter;
 ```
 
-Let's understand what this piece of code is doing ?
+Let's understand what this piece of code is doing?
 
 - We are importing the `express-rate-limit` package
 - The `windowMs` specifies the duration
@@ -710,15 +710,15 @@ app.use(rateLimiter);
 
 ![](https://imgur.com/zDzExMZ.png)
 
-# Deploying our API on heroku
+# Deploying our API on Heroku
 
-👀 We have successfully built an API but how would other developers use it if it isn't deployed it ?
+👀 We have successfully built an API but how would other developers use it if it isn't deployed?
 
-Let's deploy it on heroku 🚀.
+Let's deploy it on Heroku 🚀.
 
-Get started by initializing a git repository in the directory. Create a new github repository and push your changes into that repository 👀
+Get started by initializing a git repository in the directory. Create a new GitHub repository and push your changes into that repository 👀
 
-Let's create a new file named `Procfile` which is just a file which tells heroku which command is need to be ran. Add the below content to the `Procfile` file
+Let's create a new file named `Procfile` which is just a file that tells Heroku which command is need to be run. Add the below content to the `Procfile` file
 
 ```
 web: node index.js
@@ -726,24 +726,24 @@ web: node index.js
 
 **NOTE**: nodemon doesn't work in the production stage. It only works in the development stage, so we have to use the good old `node index.js`
 
-Create an account on [Heroku](https://herokuapp.com/) and click on `Create new app`, give some really cool name to your API
+Create an account on [Heroku](https://herokuapp.com/) and click on `Create new app`, give some cool name to your API
 
 ![](https://imgur.com/pqdLULG.png)
 
-Head over to settings tab and click `Reveal Config Vars`
+Head over to the settings tab and click `Reveal Config Vars`
 
-These are basically the environment variables
+These are the environment variables
 ![](https://imgur.com/aj7mHCD.png)
 
-Add a new config var with the key as `MONGODB_URL` and the value as your mongodb connection URL
+Add a new config var with the key as `MONGODB_URL` and the value as your MongoDB connection URL
 
-Head back to the deploy tab and connect the github repository which you have created just before to your heroku application
+Head back to the deploy tab and connect the GitHub repository which you have created just before to your Heroku application
 
 ![](https://imgur.com/eBgS6pU.png)
 
-Click the `Deploy branch` button. **TADA** 🚀 You have successfully created an REST API and deployed it as well :D
+Click the `Deploy branch` button. **TADA** 🚀 You have successfully created a REST API and deployed it as well :D
 
-The entire source code for this tutorial will be available on my github https://github.com/Kira272921/dev-credits-api
+The entire source code for this tutorial will be available on my GitHub https://github.com/Kira272921/dev-credits-api
 
 Check out the API which we built today:
 
