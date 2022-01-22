@@ -94,7 +94,7 @@ Let's breakdown it into and understand each part:
 
 - We are requiring the express package into our file so that we can use it
 - We are assigning some value to the variable port, the port where our server would be running. You might be thinking why is there a `process.env.PORT`? 🤔. It's because during deployment on services such as Heroku the port number might vary, it may not be 3000 so we are telling that if there is a PORT environment variable then use that else use 3000
-- The last piece of code is telling to which port the server should listen, in your case it's the `PORT` variable
+- The last piece of code is telling to which port the server should listen, in our case it's the `PORT` variable
 
 Let's add a new script named `start` to the `package.json` file which uses nodemon to automatically restart the server on file changes detected. So after the changes our scripts in `package.json` would look something like this:
 
