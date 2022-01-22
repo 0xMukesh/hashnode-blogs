@@ -196,7 +196,7 @@ Let's go ahead and choose the free plan 👀
 
 You would be shown some more options about the cloud provider and the location
 
-![](https://imgur.com/gLTxjxN.png)
+
 
 Let's choose the nearest region and move forward.
 
