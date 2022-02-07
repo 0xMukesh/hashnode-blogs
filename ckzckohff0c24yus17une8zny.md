@@ -1,24 +1,24 @@
 ## How to build a blog using Remix and MDX
 
-Hey , folks 👋. Today we are going to build a new blog from starch using [Remix](https://remix.run/), [MDX](https://mdxjs.com/) and [TailwindCSS](https://tailwindcss.com/)
+Hey, folks 👋. Today we are going to build a new blog from starch using [Remix](https://remix.run/), [MDX](https://mdxjs.com/) and [TailwindCSS](https://tailwindcss.com/)
 
-# 🤔 What's Remix ? Yet another JavaScript framework
+# 🤔 What's Remix? Yet another JavaScript framework
 
-Remix is a full stack web framework based on web fundamentals and modern UX. It is created by the team of [React Router](https://reactrouter.com/). Remix isn't any brand new framework it had been over since an year but it was a paid framework over then but now the time had been changed and Remix is now free and open source software 🚀.
+Remix is a full-stack web framework based on web fundamentals and modern UX. It is created by the team of [React Router](https://reactrouter.com/). Remix isn't any brand new framework it had been over for a year but it was a paid framework over then but now the time had been changed and Remix is now free and open-source software 🚀.
 
-Remix is a react based framework which allows to you render code on the server side. Wait a second 🤔 Doesn't [NextJS](https://nextjs.org/) does the same thing ?
+Remix is a React-based framework that allows to you render code on the server-side. Wait for a second 🤔 Doesn't [NextJS](https://nextjs.org/) do the same thing?
 
 Remix took the old problems but approached them in a new style 🐱‍💻.
 
-Remix only does Server Side Rendering (SSG), no Static Site Generation (SSG) and Incremental Static Regeneration (ISR) like NextJS.
+Remix only does Server Side Rendering (SSG), no Static Site Generation (SSG), and Incremental Static Regeneration (ISR) like NextJS.
 
-Applications which use Static Site Generation (SSG) are really fast, easy to deploy but it is really hard to use dynamic data, as the pages would be re-built everytime the dynamic data has been changed. In Remix, we are only doing Server Side Rendering (SSG), which is really great for dynamic data but it would be hard to deploy as you would need to have an actual server to run it.
+Applications which use Static Site Generation (SSG) are fast, easy to deploy but it is really hard to use dynamic data, as the pages would be re-built every time the dynamic data has been changed. In Remix, we are only doing Server Side Rendering (SSG), which is great for dynamic data but it would be hard to deploy as you would need to have an actual server to run it.
 
-Remix is suitable for applications which have multiple pages and which depend on some sort of dynamic data
+Remix is suitable for applications that have multiple pages and which depend on some sort of dynamic data
 
 # 🛠 Setting up the project
 
-Let's setup our project before get started to code.
+Let's set up our project before getting started to code.
 
 1. Create a new folder for our remix blog
 
@@ -44,7 +44,7 @@ Let's setup our project before get started to code.
    npx create-remix@latest
    ```
 
-   - The path of the remix application would be `./`, as we have already created folder of our project
+   - The path of the remix application would be `./`, as we have already created a folder of our project
    - We would be going to deploy our remix application on [Vercel](https://vercel.com)
    - We are going to be using JavaScript for this project
 
@@ -81,7 +81,7 @@ export default function Index() {
 }
 ```
 
-Remix supports the use of MDX to created a route module, that means we could create a new route using just a plain MDX file.
+Remix supports the use of MDX to create a route module, which means we could create a new route using just a plain MDX file.
 
 Let's create a new directory inside the `routes` directory called `posts` and inside that directory let's create a new file called `first-blog-post.mdx`
 
@@ -101,7 +101,7 @@ To check out your first blog post, visit [localhost:3000/posts/first-blog-post](
 
 > The lines in the document above between the `---` are called "frontmatter"
 
-Let's add some frontmatter to your first blog post page. You can think frontmatter as the meta data of that page.
+Let's add some front matter to your first blog post page. You can think frontmatter as the metadata of that page.
 
 You can reference your frontmatter fields through the global attributes variable in your MDX.
 
@@ -113,7 +113,7 @@ title: First Blog Post
 Hey, welcome to {attributes.title} 👋
 ```
 
-Let's now add metadata into our blog post's page using frontmatter.
+Let's now add metadata to our blog post's page using frontmatter.
 
 ```mdx
 ---
@@ -134,7 +134,7 @@ As you can see the title of the page has been changed
 
 ![](https://imgur.com/yuFHUf6.png)
 
-Let's me quickly add few blog posts
+Let's me quickly add a few blog posts
 
 ![](https://imgur.com/vI9iG0F.png)
 
@@ -146,15 +146,15 @@ We are going to be using [highlight.js](https://highlightjs.org/) for syntax hig
 
 ### 🔌 About MDX plugins
 
-We are going to achieve syntax highlighting using something called "MDX plugins". By plugins we could manipulate the process of MDX converting into HTML.
+We are going to achieve syntax highlighting using something called "MDX plugins". By plugins, we could manipulate the process of MDX converting into HTML.
 
-Generally there are two types of plugins
+Generally, there are two types of plugins
 
 - Remark plugins are responsible for manipulating the process of converting MDX to markdown.
 
 - Rehype plugins are responsible for manipulating the process of converting the markdown to HTML.
 
-For our remix blog, we are going to be using a rehype plugin called [rehype-highlight](https://www.npmjs.com/package/rehype-highlight). To install the package use the following command:
+For our remix blog, we are going to be using a rehype plugin called [rehype-highlight](https://www.npmjs.com/package/rehype-highlight). To install the package using the following command:
 
 ```bash
 npm install rehype-highlight
@@ -198,9 +198,9 @@ module.exports = {
 
 ### 🧾 Creating a layout file
 
-Now we have create a layout file, where we would importing one of the highlight.js's styling. I would be using night owl style, you could choose your own style from highlight.js's [style demo page](https://highlightjs.org/static/demo/)
+Now we have created a layout file, where we would import one of the highlight.js's styling. I would be using night owl style, you could choose your style from highlight.js's [style demo page](https://highlightjs.org/static/demo/)
 
-To create a layout file for our blog posts, we have create a new file with the same name as the folder name (`posts`) and the same level of the `posts` folder.
+To create a layout file for our blog posts, we have created a new file with the same name as the folder name (`posts`) and the same level of the `posts` folder.
 
 ![](https://imgur.com/MtEUjC0.png)
 
@@ -236,11 +236,11 @@ Now let's restart our local development server.
 
 ## 🎨 Adding TailwindCSS Typography
 
-Right now our blog have syntax highlight but the font isn't looking great 🤔 and there is nothing great than [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) plugin to automatically styles our entire page's using a single `prose` class.
+Right now our blog has syntax highlight but the font isn't looking great 🤔 and there is nothing great than [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) plugin to automatically styles our entire page's using a single `prose` class.
 
 ### 📦 Installing dependencies
 
-We need few dependencies for us to use tailwindcss and tailwindcss's typography plugin.
+We need a few dependencies for us to use tailwindcss and tailwindcss's typography plugin.
 
 Those dependencies are:
 
@@ -254,9 +254,9 @@ npm install -D tailwindcss concurrently @tailwindcss/typography
 
 ### ⚙ Configuring TailwindCSS
 
-Create a new file named `tailwind.config.js`, this file would contain all the configuration for tailwindcss.
+Create a new file named `tailwind.config.js`, this file would contain all the configurations for tailwindcss.
 
-Add the follow configuration to `tailwind.config.js` file
+Add the following configuration to the `tailwind.config.js` file
 
 `tailwind.config.js`
 
@@ -308,13 +308,13 @@ app/root.jsx:9:19: error: Could not resolve "./tailwind.css
 
 ![](https://imgur.com/iHGXcv1.png)
 
-This occurred because there is no `tailwind.css` file but you would see that the file is been created. If in your case the file didn't create then create a new file named `tailwind.css` in the `app` directory and copy and paste the css from this gist, https://gist.github.com/Kira272921/4541f16d37e6ab4d278ccdcaf3c7e36b
+This occurred because there is no `tailwind.css` file but you would see that the file is been created. If in your case the file didn't create then create a new file named `tailwind.css` in the `app` directory and copy and paste the CSS from this gist, https://gist.github.com/Kira272921/4541f16d37e6ab4d278ccdcaf3c7e36b
 
 ### 💻 Using @tailwindcss/typography plugin
 
 Let's open the `app/routes/posts.jsx` file and add few styling.
 
-> As `app/routes/posts.jsx` file is the layout file for all the blog posts, if few add any kind of styling then it would reflect back in the blog posts pages
+> As `app/routes/posts.jsx` file is the layout file for all the blog posts, if few add any kind of styling then it would reflect in the blog posts pages
 
 ```jsx
 return (
@@ -326,7 +326,7 @@ return (
 );
 ```
 
-Here are are using the `@tailwindcss/typography` plugin
+Here are using the `@tailwindcss/typography` plugin
 
 **TADA** 🎉. Look how beautiful the blog posts are looking now
 
@@ -334,7 +334,7 @@ Here are are using the `@tailwindcss/typography` plugin
 
 ## 📰 Creating a list of articles
 
-Let's create a list of articles in the main page (aka root route).
+Let's create a list of articles on the main page (aka root route).
 
 In remix, you could import the entire mdx module as well as the attributes within them.
 
@@ -358,7 +358,7 @@ function postFromModule(mod) {
 }
 ```
 
-In remix, we use a loader function to load data on the server side
+In remix, we use a loader function to load data on the server-side
 
 `app/index.jsx`
 
@@ -368,9 +368,9 @@ export const loader = () => {
 };
 ```
 
-Here we are loading each of our MDX modules on the server side using the loader function
+Here we are loading each of our MDX modules on the server-side using the loader function
 
-Finally our `app/index.jsx` would look something like this
+Finally, our `app/index.jsx` would look something like this
 
 ```jsx
 import { Link, useLoaderData } from 'remix';
@@ -423,25 +423,25 @@ As our application let's deploy it on vercel 🚀.
    git init
    ```
 
-1. Create a new github repository
+1. Create a new GitHub repository
 
 1. Push your changes to that repository
 
 ```bash
-git remote add origin git@github.com:Kira272921/remix-blog.git # change url to your repo's link
+git remote add origin git@github.com:Kira272921/remix-blog.git # change URL to your repo's link
 git add .
 git commit -m "feat: initial commit"
 git branch -M main
 git push -u origin main
 ```
 
-1. If you don't have a account on vercel, create one
+1. If you don't have an account on vercel, create one
 
 1. Create a new project
 
    ![](https://imgur.com/9wfhEQ9.png)
 
-1. Import the remix application from our github account
+1. Import the remix application from our GitHub account
 
    ![](https://imgur.com/EMKOgOs.png)
 
@@ -449,7 +449,7 @@ git push -u origin main
 
    ![](https://imgur.com/fgIkn2L.png)
 
-   - If you are getting error something like this, add a new script to `package.json`
+   - If you are getting an error something like this, add a new script to `package.json`
 
      ```
      "postinstall": "remix setup node"
@@ -457,7 +457,7 @@ git push -u origin main
 
      ![](https://imgur.com/PAG3nla.png)
 
-The entire code for this tutorial is present on my github: https://github.com/kira272921/remix-blog
+The entire code for this tutorial is present on my GitHub: https://github.com/kira272921/remix-blog
 
 Here is what we have built today 🚀: https://remix-blog-orcin.vercel.app/
 
