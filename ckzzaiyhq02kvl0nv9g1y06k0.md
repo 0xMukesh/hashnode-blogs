@@ -2,7 +2,7 @@
 
 Hey folks 👀. Hope y'all are doing great. You might have heard about web3 and its hype on Twitter and maybe you wanna explore it as well. Well, so today I am here to give all a quick tour of solidity 🚀. So let's get started.
 
-**NOTE**: This blog post isn't a complete tutorial of solidity. You can take this blog post as a quickstart for the journey with solidity and web3. If you are in search of resources, checkout the resources notion page of X Days of Solidity: https://xdaysofsolidity.notion.site/Resources-6f2f5d09f32a454194f53a0a01e75268
+**NOTE**: This blog post isn't a complete tutorial of solidity. You can take this blog post as a quickstart for the journey with solidity and web3. If you are in search of resources, checkout the resources notion page of X Days of Solidity: https://links.kiradev.co/misc/solidity-resources
 
 ![](https://c.tenor.com/Q8VheZPaZM4AAAAM/stocks-amc.gif)
 
@@ -304,7 +304,7 @@ Let's now talk a look at the array operation in solidity 👀
    You can use the `length` method to get the length of an array. Similar to how to find the length of an array in JavaScript.
 
    ```solidity
-   // SPDX-License-Identifier: MIT
+    // SPDX-License-Identifier: MIT
 
     pragma solidity ^0.8.0;
 
@@ -346,19 +346,19 @@ Let's now talk a look at the array operation in solidity 👀
 5. **Pop**: Pop is used to remove the last element from a dynamic array
 
    ```solidity
-   // SPDX-License-Identifier: MIT
+    // SPDX-License-Identifier: MIT
 
-   pragma solidity ^0.8.0;
+    pragma solidity ^0.8.0;
 
-   import "hardhat/console.sol";
+    import "hardhat/console.sol";
 
-   contract AddingElement {
-       string[] data = ["hi", "hello", "yo"];
+    contract AddingElement {
+        string[] data = ["hi", "hello", "yo"];
 
-       constructor() {
-           data.pop();
-       }
-   }
+        constructor() {
+            data.pop();
+        }
+    }
    ```
 
 Phew, that was long 😓
