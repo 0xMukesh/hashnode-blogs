@@ -36,6 +36,7 @@ We would be using a tool called [Hardhat](https://hardhat.org/). This would crea
   ```bash
   npm init -y
   ```
+   - If you get an error saying `npm command not found` then go ahead and install NodeJS from https://nodejs.org. Install the LTS version
 - Installing Hardhat
 
   ```bash
@@ -420,3 +421,7 @@ That's the end folks 👋. I would be releasing another part on "Solidity Quicks
 The code for this entire "Solidity Quickstart" series would be available on my GitHub:
 
 https://github.com/kira272921/solidity-quickstart
+
+Checkout the notion board for "X Days of Solidity" 
+
+https://links.kiradev.co/project/x-days-of-solidity
